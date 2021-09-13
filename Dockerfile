@@ -3,15 +3,15 @@
 # This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
 # PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
-FROM theteamultroid/ultroid:main
+FROM vasu-xd/ultroid:main
 
 # set timezone
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # clone the repo and change workdir
-RUN git clone https://github.com/TeamUltroid/Ultroid.git /root/TeamUltroid/
-WORKDIR /root/TeamUltroid/
+RUN git clone https://github.com/VASU-XD/Ultroid.git /root/VASU-XD/
+WORKDIR /root/VASU-XD/
 
 # install main requirements.
 RUN pip3 install --no-cache-dir -r requirements.txt
