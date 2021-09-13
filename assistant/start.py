@@ -22,8 +22,6 @@ Owner_info_msg = f"""
 <strong>OwnerID</strong> - <code>{OWNER_ID}</code>
 
 <strong>Message Forwards</strong> - {udB.get("PMBOT")}
-
-<strong>Ultroid <a href=https://github.com/TeamUltroid/Ultroid>[v{ultroid_version}]</a>, powered by @TeamUltroid</strong>
 """
 
 _settings = [
@@ -81,9 +79,9 @@ async def ultroid(event):
         u = await event.client.get_entity(event.chat_id)
         if not udB.get("STARTMSG"):
             if udB.get("PMBOT") == "True":
-                ok = "You can contact my master using this bot!!\n\nSend your Message, I will Deliver it To Master."
+                ok = "⬇️ Write here a message in this chat and I will forward it to [ᴠᴀꜱᴜ](tg://user?id={ultroid_bot.uid})!"
             await event.reply(
-                f"Hey there [{get_display_name(u)}](tg://user?id={u.id}), this is Ultroid Assistant of [{ultroid_bot.me.first_name}](tg://user?id={ultroid_bot.uid})!\n\n{ok}",
+                f"👋🏻 Hi [{get_display_name(u)}](tg://user?id={u.id})! this is Assistant Bot of [ᴠᴀꜱᴜ](tg://user?id={ultroid_bot.uid})!\n\n{ok}",
                 buttons=[Button.inline("Info.", data="ownerinfo")],
             )
         else:
